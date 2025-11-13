@@ -1,0 +1,55 @@
+### Регистрация
+POST http://localhost:5000/auth/register
+Content-Type: application/json
+
+{
+  "username": "Sultan",
+  "email": "astromidand2929@gmail.com",
+  "password": "1234"
+}
+
+### Авторизц
+POST http://localhost:5000/auth/login
+Content-Type: application/json
+
+{
+  "email": "astromidand2929@gmail.com",
+  "password": "1234"
+}
+
+### Проверка защищённого маршрута
+GET http://localhost:5000/auth/profile
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY5MTMzNzBhYzc1NjM3OGQ2ZDBmNGMyNiIsImVtYWlsIjoiYXN0cm9taWRhbmQyOTI5QGdtYWlsLmNvbSIsImRhdGUiOiIyMDI1LTExLTExVDEzOjE1OjU0LjE2MFoiLCJpYXQiOjE3NjI5NjE4NTYsImV4cCI6MTc2MzAyMzA1Nn0.v3Zkyf-tyHxVER3VZuceNSHlZnwjL6bDEKe8Us7R4h0
+
+
+
+### Создать задачу (To-Do)
+POST http://localhost:5000/execution/task
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY5MTMzNzBhYzc1NjM3OGQ2ZDBmNGMyNiIsImVtYWlsIjoiYXN0cm9taWRhbmQyOTI5QGdtYWlsLmNvbSIsImRhdGUiOiIyMDI1LTExLTExVDEzOjE1OjU0LjE2MFoiLCJpYXQiOjE3NjI5NjA3OTIsImV4cCI6MTc2MzAyMTk5Mn0.-NQSGx1mGQKg6nTe3eNmMEmjMTAhi_flCfyXBPudOQQ
+
+{
+  "text": "Выучить JWT и ToDo проект"
+}
+
+
+
+### Получить все задачи
+GET http://localhost:5000/execution/tasks
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY5MTMzNzBhYzc1NjM3OGQ2ZDBmNGMyNiIsImVtYWlsIjoiYXN0cm9taWRhbmQyOTI5QGdtYWlsLmNvbSIsImRhdGUiOiIyMDI1LTExLTExVDEzOjE1OjU0LjE2MFoiLCJpYXQiOjE3NjI5NjA3OTIsImV4cCI6MTc2MzAyMTk5Mn0.-NQSGx1mGQKg6nTe3eNmMEmjMTAhi_flCfyXBPudOQQ
+
+
+### Обновить задачу по id 
+PUT http://localhost:5000/execution/tasks/
+Content-Type: application/json
+Authorization: Bearer
+
+{
+  "text": "Обновлённая задача2",
+  "completed": true
+}
+
+
+###Удалить задачу
+DELETE http://localhost:5000/execution/tasks/6914a70a53788180e743b862
+Authorization: Bearer
