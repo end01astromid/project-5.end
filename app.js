@@ -10,6 +10,9 @@ const postRoutes = require('./service');
 app.use('/auth', postRoutes);
 app.use('/execution', postRoutes);
 
+let j1 = 123
+
+
 // Подключаем MongoDB
 async function mongo() {
   try {
