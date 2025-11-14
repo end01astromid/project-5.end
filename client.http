@@ -17,16 +17,11 @@ Content-Type: application/json
   "password": "1234"
 }
 
-### Проверка защищённого маршрута
-GET http://localhost:5000/auth/profile
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY5MTMzNzBhYzc1NjM3OGQ2ZDBmNGMyNiIsImVtYWlsIjoiYXN0cm9taWRhbmQyOTI5QGdtYWlsLmNvbSIsImRhdGUiOiIyMDI1LTExLTExVDEzOjE1OjU0LjE2MFoiLCJpYXQiOjE3NjI5NjE4NTYsImV4cCI6MTc2MzAyMzA1Nn0.v3Zkyf-tyHxVER3VZuceNSHlZnwjL6bDEKe8Us7R4h0
-
-
 
 ### Создать задачу (To-Do)
 POST http://localhost:5000/execution/task
 Content-Type: application/json
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY5MTMzNzBhYzc1NjM3OGQ2ZDBmNGMyNiIsImVtYWlsIjoiYXN0cm9taWRhbmQyOTI5QGdtYWlsLmNvbSIsImRhdGUiOiIyMDI1LTExLTExVDEzOjE1OjU0LjE2MFoiLCJpYXQiOjE3NjI5NjA3OTIsImV4cCI6MTc2MzAyMTk5Mn0.-NQSGx1mGQKg6nTe3eNmMEmjMTAhi_flCfyXBPudOQQ
+Authorization: Bearer 
 
 {
   "text": "Выучить JWT и ToDo проект"
@@ -36,20 +31,25 @@ Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY5MTMzNzBhY
 
 ### Получить все задачи
 GET http://localhost:5000/execution/tasks
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY5MTMzNzBhYzc1NjM3OGQ2ZDBmNGMyNiIsImVtYWlsIjoiYXN0cm9taWRhbmQyOTI5QGdtYWlsLmNvbSIsImRhdGUiOiIyMDI1LTExLTExVDEzOjE1OjU0LjE2MFoiLCJpYXQiOjE3NjI5NjA3OTIsImV4cCI6MTc2MzAyMTk5Mn0.-NQSGx1mGQKg6nTe3eNmMEmjMTAhi_flCfyXBPudOQQ
+Authorization: Bearer 
 
 
 ### Обновить задачу по id 
 PUT http://localhost:5000/execution/tasks/
 Content-Type: application/json
-Authorization: Bearer
+Authorization: Bearer 
 
 {
-  "text": "Обновлённая задача2",
+  "text": "Обновлённая задача3",
   "completed": true
 }
 
 
 ###Удалить задачу
-DELETE http://localhost:5000/execution/tasks/6914a70a53788180e743b862
+DELETE http://localhost:5000/execution/tasks/
 Authorization: Bearer
+
+
+### Проверка защищённого маршрута
+GET http://localhost:5000/auth/profile
+Authorization: Bearer 
