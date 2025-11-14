@@ -47,6 +47,7 @@ Authorization: Bearer
 
 
 
+
 ###Удалить задачу
 DELETE http://localhost:5000/execution/tasks/
 Authorization: Bearer
