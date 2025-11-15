@@ -6,7 +6,7 @@ import 'dotenv/config'
 import sendEmail from './sendingmail/sendemail.js'
 import User from'./models/user.js'
 import Task from './models/task.js'
-import authMidlle from './middle_token/authMiddleware.js'
+import authMiddleware from './middle_token/authMiddleware.js'
 
 const router = express.Router();
 
@@ -73,7 +73,7 @@ router.post('/login',async(req,res)=>{
 })
 
 //Защищённый маршрут
-router.get('/profile', authMidlle, async (req, res) => {
+router.get('/profile', authMiddleware, async (req, res) => {
   res.json({
     message: 'Добро пожаловать в профиль!',
     user: req.user, // данные которые были в токене (id, email)
@@ -83,7 +83,7 @@ router.get('/profile', authMidlle, async (req, res) => {
 
 
 // Создать задачу
-router.post('/task', authMidlle,async(req,res)=>{
+router.post('/task', authMiddleware,async(req,res)=>{
   try{
   const { text } = req.body;
   const task = new Task({text,user: req.user.id})
@@ -96,14 +96,14 @@ router.post('/task', authMidlle,async(req,res)=>{
 
 
 // Получить все задачи пользователя
-router.get('/tasks',authMidlle,async(req,res)=>{
+router.get('/tasks',authMiddleware,async(req,res)=>{
   const tasks = await Task.find({user: req.user.id})
   res.json(tasks)
 })
 
 
 // Обновить задачу
-router.put('/tasks/:id', authMidlle, async (req, res) => {
+router.put('/tasks/:id', authMiddleware, async (req, res) => {
   try{
  const { id } = req.params;
   const updated = await Task.findOneAndUpdate(
@@ -120,7 +120,7 @@ router.put('/tasks/:id', authMidlle, async (req, res) => {
 });
 
 //удалить задачу
-router.delete('/tasks/:id',authMidlle,async(req,res)=>{
+router.delete('/tasks/:id',authMiddleware,async(req,res)=>{
   try{
   const {id} = req.params;
   const deleted = await Task.findByIdAndDelete({_id: id, user: req.user.id})
