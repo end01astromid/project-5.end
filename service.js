@@ -1,14 +1,12 @@
-const express = require('express');
-const bcrypt = require('bcrypt');
-const jwt = require('jsonwebtoken');
-require('dotenv').config();
+import express from 'express'
+import bcrypt from 'bcrypt'
+import jwt from 'jsonwebtoken'
+import 'dotenv/config'
 
-const sendEmail = require('./sendingmail/sendemail')
-const User = require('./models/user')
-const Task = require('./models/task');
-
-const authMidlle = require('./middle_token/authMiddleware')
-
+import sendEmail from './sendingmail/sendemail.js'
+import User from'./models/user.js'
+import Task from './models/task.js'
+import authMidlle from './middle_token/authMiddleware.js'
 
 const router = express.Router();
 
@@ -135,4 +133,4 @@ router.delete('/tasks/:id',authMidlle,async(req,res)=>{
 })
 
 
-module.exports = router
+export default router;

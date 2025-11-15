@@ -1,12 +1,12 @@
-const express = require('express');
-const mongoose = require('mongoose');
-require('dotenv').config();
+import express from 'express'
+import mongoose from 'mongoose'
+import 'dotenv/config'
 
 const app = express();
 app.use(express.json());
 
 // Подключаем маршруты + префикс
-const postRoutes = require('./service');
+import postRoutes from './service.js'
 app.use('/auth', postRoutes);
 app.use('/execution', postRoutes);
 

@@ -29,7 +29,6 @@ Authorization: Bearer
 }
 
 
-
 ### Получить все задачи
 GET http://localhost:5000/execution/tasks
 Authorization: Bearer 
@@ -46,9 +45,9 @@ Authorization: Bearer
 }
 
 
-###Удалить задачу
+###Удалить задачу по id
 DELETE http://localhost:5000/execution/tasks/
-Authorization: Bearer
+Authorization: Bearer 
 
 
 ### Проверка защищённого маршрута
