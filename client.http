@@ -22,7 +22,7 @@ Content-Type: application/json
 ### Создать задачу (To-Do)
 POST http://localhost:5000/execution/task
 Content-Type: application/json
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY5MTMzNzBhYzc1NjM3OGQ2ZDBmNGMyNiIsImVtYWlsIjoiYXN0cm9taWRhbmQyOTI5QGdtYWlsLmNvbSIsImRhdGUiOiIyMDI1LTExLTExVDEzOjE1OjU0LjE2MFoiLCJpYXQiOjE3NjMzNjE0MjYsImV4cCI6MTc2MzQyMjYyNn0.1q0FswbtlbKk-sI0eD-Lp6OoM_8ga0K58tL3lJK9nGg
+Authorization: Bearer 
 
 {
   "text": "Выучить JWT и ToDo проект"
@@ -40,7 +40,7 @@ Content-Type: application/json
 Authorization: Bearer 
 
 {
-  "text": "Обновлённая задача3",
+  "text": "Обновлённая задача1",
   "completed": true
 }
 
