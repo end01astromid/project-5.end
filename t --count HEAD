@@ -1,0 +1,13 @@
+[33m8bbd467[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mmain[m[33m, [m[1;31morigin/main[m[33m, [m[1;31morigin/HEAD[m[33m)[m Поменял переменную middle на ware
+[33mbfb6be7[m Убрал require заменила на import
+[33m794f4a7[m исправил
+[33md24f113[m исправил
+[33m6354bd7[m убрал let тд
+[33mad447a6[m Добавил let в app.js
+[33m693c33e[m Добавил перменную let
+[33m8886092[m убрал токены с Bearer и id
+[33mfb2671b[m Merge branch 'main' of https://github.com/end01astromid/project-5.end
+[33m44a3a53[m убрал токены с Bearer и id
+[33me07a465[m Update README.md
+[33mdc544d7[m Create README.md
+[33m83d9c66[m Initial clean commit

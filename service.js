@@ -108,8 +108,7 @@ router.put('/tasks/:id', authMiddleware, async (req, res) => {
  const { id } = req.params;
   const updated = await Task.findOneAndUpdate(
     { _id: id, user: req.user.id },
-    { text: req.body.text, completed: req.body.completed },
-    { new: true }
+    { text: req.body.text},
   );
   if (!updated) return res.status(404).json({ message: 'Задача не найдена' });
   res.json({ message: 'Задача обновлена', updated });
